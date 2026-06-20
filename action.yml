@@ -33,13 +33,13 @@ runs:
   using: composite
   steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       if: |
         hashFiles('.github') == '' &&
         inputs.coverage-file == ''        
 
     - name: Checkout wiki
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         repository: ${{github.repository}}.wiki
         path: ./.github/wiki/
